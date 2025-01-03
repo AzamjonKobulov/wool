@@ -10,6 +10,8 @@ export default function Home() {
       <Sales />
       <Categories />
       <Discounts />
+      <Discounts />
+      <Discounts />
     </>
   );
 }
