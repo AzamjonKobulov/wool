@@ -35,9 +35,9 @@ export default function Blog() {
         </div>
 
         {/* Blogs */}
-        <div className="flex flex-col gap-7">
+        <div className="flex flex-col md:flex-row gap-7">
           {/* Image */}
-          <div className="relative flex items-end aspect-square rounded-lg overflow-hidden p-3">
+          <div className="relative flex items-end aspect-square xs:aspect-video rounded-lg overflow-hidden p-3">
             <Image
               src="/assets/images/img-blogs.png"
               alt="Blog Image"

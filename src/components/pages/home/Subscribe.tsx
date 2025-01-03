@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Subscribe() {
   return (
-    <section className="bg-brand-purple-10 text-white py-4 px-4">
-      <div className="max-w-base mx-auto flex flex-col gap-5">
+    <section className="bg-brand-purple-10 text-white py-4">
+      <div className="max-w-5xl mx-auto flex flex-col gap-5 px-2.5">
         <p className="font-semibold text-[19px] leading-[26px]">
           Подпишитесь на рассылку и будьте в курсе: акций, скидок, распродаж!
         </p>
@@ -13,7 +13,7 @@ export default function Subscribe() {
         >
           <input
             type="email"
-            className="w-[149px] font-medium  text-brand-dark placeholder:text-brand-dark outline-none"
+            className="w-[149px] font-medium  text-brand-dark placeholder:text-brand-dark outline-none px-2.5"
             placeholder="Е-mail"
           />
           <button className="bg-brand-purple-10 rounded-md font-bold py-2 px-6">

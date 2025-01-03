@@ -150,8 +150,8 @@ export default function Footer() {
                   <path
                     d="M4.60156 15.6875L11.3906 8.6875L4.60156 1.6875"
                     stroke="#222222"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </button>

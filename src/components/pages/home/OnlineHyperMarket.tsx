@@ -42,7 +42,7 @@ const items: Item[] = [
 export default function OnlineHyperMarket() {
   return (
     <section>
-      <div className="max-w-base mx-auto my-8 px-2.5">
+      <div className="max-w-5xl mx-auto my-8 px-2.5">
         <div className="space-y-1.5 bg-brand-purple-10 text-white rounded-lg px-3.5 pt-3.5 pb-2.5">
           <h2>Онлайн-гипермаркет Toodo</h2>
           <ul className="space-y-2.5">

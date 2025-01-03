@@ -3,7 +3,7 @@ import React from "react";
 export default function SiteRibat() {
   return (
     <section>
-      <div className="max-w-base mx-0 space-y-5 px-2.5">
+      <div className="max-w-5xl mx-auto space-y-5 px-2.5">
         <h2>Сайт рыбат екст поможет дизайнеру, верстальщику, вебмастеру </h2>
         <p className="text-sm font-semibold leading-[22px]">
           Сайт рыбат екст поможет дизайнеру, верстальщику, вебмастеру

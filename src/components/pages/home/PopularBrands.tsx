@@ -99,12 +99,22 @@ export default function PopularBrands() {
               slidesPerView: 2.5,
               spaceBetween: 10,
             },
-            768: {
-              slidesPerView: 3.5,
+            640: {
+              slidesPerView: 5,
               spaceBetween: 10,
+              grid: {
+                rows: 3,
+              },
+            },
+            768: {
+              slidesPerView: 5,
+              spaceBetween: 10,
+              grid: {
+                rows: 3,
+              },
             },
             1024: {
-              slidesPerView: 3.7,
+              slidesPerView: 5,
               spaceBetween: 10,
             },
           }}
