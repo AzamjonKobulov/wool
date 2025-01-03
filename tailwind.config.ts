@@ -35,6 +35,7 @@ export default {
           blue: "#00A3FF",
           red: "#FE4928",
           green: "#2DBE64",
+          peach: "##FFC4D0",
           "light-green": "#9ED6A1",
           "dark-red": "#760000",
           "dark-green": "#204F3D",

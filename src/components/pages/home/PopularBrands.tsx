@@ -1,57 +1,64 @@
 "use client";
 
+import Image from "next/image";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/grid";
 
 // import required modules
-import { Pagination } from "swiper/modules";
-import ProductCard from "@/components/shared/ProductCard";
+import { Grid } from "swiper/modules";
+import Link from "next/link";
 
-const carpets = [
+const brands = [
   {
-    img: "/assets/images/carpet-1.jpeg",
+    img: "/assets/images/brand-1.png",
   },
   {
-    img: "/assets/images/carpet-2.jpeg",
+    img: "/assets/images/brand-2.png",
   },
   {
-    img: "/assets/images/carpet-3.jpeg",
+    img: "/assets/images/brand-3.png",
   },
   {
-    img: "/assets/images/carpet-4.jpeg",
+    img: "/assets/images/brand-4.png",
   },
   {
-    img: "/assets/images/carpet-5.jpeg",
+    img: "/assets/images/brand-5.png",
   },
   {
-    img: "/assets/images/carpet-6.jpeg",
+    img: "/assets/images/brand-6.png",
   },
   {
-    img: "/assets/images/carpet-7.jpeg",
+    img: "/assets/images/brand-7.png",
   },
   {
-    img: "/assets/images/carpet-8.jpeg",
+    img: "/assets/images/brand-8.png",
   },
   {
-    img: "/assets/images/carpet-9.jpeg",
+    img: "/assets/images/brand-9.png",
   },
   {
-    img: "/assets/images/carpet-10.jpeg",
+    img: "/assets/images/brand-10.png",
+  },
+  {
+    img: "/assets/images/brand-11.png",
+  },
+  {
+    img: "/assets/images/brand-12.png",
   },
 ];
 
-export default function Discounts() {
+export default function PopularBrands() {
   return (
     <section id="Sales">
       <div className="max-w-5xl mx-auto pt-8 space-y-6 px-2.5">
         {/* Title */}
         <div className="flex items-center justify-between">
           <h2 className="font-semibold text-brand-dark text-[19px] leading-[26px]">
-            Подборка товаров <br /> со скидками
+            Популярные бренды
           </h2>
 
           <button className="flex items-center gap-2.5 bg-brand-gray-20 text-brand-purple-10 text-xs font-semibold leading-5 rounded-lg py-1.5 px-3">
@@ -71,37 +78,52 @@ export default function Discounts() {
             </svg>
           </button>
         </div>
+
         <Swiper
-          spaceBetween={20}
           pagination={{
             clickable: true,
           }}
+          grid={{
+            rows: 2,
+            fill: "row",
+          }}
           loop={true}
-          modules={[Pagination]}
+          modules={[Grid]}
           autoplay={true}
           breakpoints={{
             0: {
-              slidesPerView: 2.2,
-              spaceBetween: 20,
+              slidesPerView: 2.5,
+              spaceBetween: 10,
             },
             480: {
-              slidesPerView: 3.5,
-              spaceBetween: 20,
+              slidesPerView: 2.5,
+              spaceBetween: 10,
             },
-            640: {
-              slidesPerView: 4,
-              spaceBetween: 20,
+            768: {
+              slidesPerView: 3.5,
+              spaceBetween: 10,
             },
             1024: {
-              slidesPerView: 5,
-              spaceBetween: 20,
+              slidesPerView: 3.7,
+              spaceBetween: 10,
             },
           }}
-          className="discounts_swiper"
+          className="categories_swiper"
         >
-          {carpets.map((carpet, idx) => (
+          {brands.map((brand, idx) => (
             <SwiperSlide key={idx}>
-              <ProductCard carpet={carpet} />
+              <Link
+                href="/"
+                className="min-h-24 flex items-center justify-center border-2 border-brand-gray-20 rounded-lg p-2.5"
+              >
+                <Image
+                  src={brand.img}
+                  alt="brand"
+                  width={2000}
+                  height={1000}
+                  className="w-full shrink-0"
+                />
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

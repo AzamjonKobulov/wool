@@ -6,7 +6,11 @@
 
 @layer base {
   body {
-    @apply font-manrope;
+    @apply font-manrope text-brand-dark;
+  }
+
+  h2 {
+    @apply font-semibold text-[19px] leading-[26px];
   }
 }
 

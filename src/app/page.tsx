@@ -1,7 +1,12 @@
 import Banner from "@/components/pages/home/Banner";
+import Blog from "@/components/pages/home/Blog";
 import Categories from "@/components/pages/home/Categories";
 import Discounts from "@/components/pages/home/Discounts";
+import OnlineHyperMarket from "@/components/pages/home/OnlineHyperMarket";
+import PopularBrands from "@/components/pages/home/PopularBrands";
 import Sales from "@/components/pages/home/Sales";
+import SiteRibat from "@/components/pages/home/SiteRibat";
+import Subscribe from "@/components/pages/home/Subscribe";
 
 export default function Home() {
   return (
@@ -12,6 +17,14 @@ export default function Home() {
       <Discounts />
       <Discounts />
       <Discounts />
+      <OnlineHyperMarket />
+      <Discounts />
+      <SiteRibat />
+      <Discounts />
+      <SiteRibat />
+      <Blog />
+      <PopularBrands />
+      <Subscribe />
     </>
   );
 }
