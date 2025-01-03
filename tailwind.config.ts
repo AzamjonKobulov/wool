@@ -8,9 +8,55 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280",
+        "2xl": "1440px",
+      },
+      maxWidth: {
+        base: "1460px",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        manrope: ["Manrope", "sans-serif"],
+      },
+      fontSize: {
+        8: "8px",
+        10: "10px",
+        11: "11px",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        brand: {
+          dark: "#222222",
+          yellow: "#FEE000",
+          blue: "#00A3FF",
+          red: "#FE4928",
+          green: "#2DBE64",
+          "light-green": "#9ED6A1",
+          "dark-red": "#760000",
+          "dark-green": "#204F3D",
+          "light-red": "#F22A52",
+          purple: {
+            DEFAULT: "#7B61FF",
+            10: "#7573F6",
+          },
+          gray: {
+            10: "#FAFAFF",
+            20: "#F5F5FF",
+            30: "#E6E6F0",
+            40: "#BCBCCC",
+            50: "#9393A3",
+            60: "#67677A",
+            70: "#3E3E52",
+          },
+        },
+      },
+      borderRadius: {
+        10: "10px",
+        20: "20px",
       },
     },
   },

@@ -1,21 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply font-manrope;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.swiper-wrapper {
+  @apply !pb-8 overflow-visible;
+}
+.swiper-pagination-bulltes {
+  @apply !gap-1 !-mb-20;
+}
+
+.swiper-pagination-bullet {
+  @apply !w-2 !h-0.5 !bg-brand-purple-10 !rounded transition-all duration-300;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !w-4 !h-0.5 !bg-brand-purple-10 !rounded transition-all duration-300;
 }
