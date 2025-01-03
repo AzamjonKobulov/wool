@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 
 type AccordionItem = {
   title: string;
-  customContent?: JSX.Element;
+  customContent?: React.ReactNode;
   links?: string[];
 };
 
