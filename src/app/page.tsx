@@ -7,6 +7,7 @@ import PopularBrands from "@/components/pages/home/PopularBrands";
 import Sales from "@/components/pages/home/Sales";
 import SiteRibat from "@/components/pages/home/SiteRibat";
 import Subscribe from "@/components/pages/home/Subscribe";
+import TopProducts from "@/components/pages/home/TopProducts";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <OnlineHyperMarket />
       <Discounts />
       <SiteRibat />
+      <TopProducts />
       <Discounts />
       <SiteRibat />
       <Blog />

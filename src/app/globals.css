@@ -28,3 +28,7 @@
 .swiper-pagination-bullet-active {
   @apply !w-4 !h-0.5 !bg-brand-purple-10 !rounded transition-all duration-300;
 }
+
+.scroll-none::-webkit-scrollbar {
+  @apply size-0;
+}
