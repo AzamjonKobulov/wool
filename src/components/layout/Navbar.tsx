@@ -6,10 +6,13 @@ import ContactsDropdown from "../shared/ContactsDropdown";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import SelectCityDropdown from "../shared/SelectCityDropdown";
+import SearchModal from "../shared/SearchModal";
+import { document } from "postcss";
 
 export default function Navbar() {
   const [contactsOpen, setContactsOpen] = useState(false);
   const [citiesOpen, setCitiesOpen] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
 
   function toggleContacts() {
     setContactsOpen((open) => !open);
@@ -17,7 +20,12 @@ export default function Navbar() {
 
   function toggleCities() {
     setCitiesOpen((open) => !open);
-    console.log("toggle");
+  }
+
+  function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const value = e.target.value;
+    setIsTyping(value.length > 0);
+    // document.body.classList.add("overflow-hidden");
   }
 
   return (
@@ -157,30 +165,23 @@ export default function Navbar() {
             <div className="relative mt-2.5">
               <input
                 type="text"
-                className="size-full text-xs border border-brand-purple-10 rounded placeholder:text-brand-dark outline-brand-purple-10 px-4 py-3"
+                className="relative z-30 size-full text-xs border border-brand-purple-10 rounded placeholder:text-brand-dark outline-brand-purple-10 px-4 py-3"
                 placeholder="Я ищу..."
                 id="search"
+                onFocus={() => {
+                  setIsTyping(true); // Show the modal
+                  document.body.classList.add("overflow-hidden"); // Add class to body
+                }}
+                onBlur={(e) => {
+                  if (!e.target.value) {
+                    setIsTyping(false); // Hide the modal if input is empty
+                    document.body.classList.remove("overflow-hidden"); // Remove class from body
+                  }
+                }}
+                onChange={handleSearchChange}
               />
 
-              <label
-                htmlFor="search"
-                className="size-[30px] absolute top-1.5 right-1.5 grid place-content-center bg-brand-purple-10 rounded-lg p-2"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M11.4401 11.4878L14.125 14.125M13.2127 7.44318C13.2127 10.5184 10.6747 13.0114 7.54385 13.0114C4.41303 13.0114 1.875 10.5184 1.875 7.44318C1.875 4.36796 4.41303 1.875 7.54385 1.875C10.6747 1.875 13.2127 4.36796 13.2127 7.44318Z"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </label>
+              <AnimatePresence>{isTyping && <SearchModal />}</AnimatePresence>
             </div>
           </div>
         </div>
