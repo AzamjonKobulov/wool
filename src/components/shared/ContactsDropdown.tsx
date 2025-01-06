@@ -21,7 +21,7 @@ export default function ContactsDropdown({
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
-      className="absolute z-10 right-0 top-6 bg-white space-y-2.5 border border-brand-gray-30 rounded-2xl lg:rounded-3xl shadow-contact-dropdown p-4 lg:p-6"
+      className="absolute z-40 right-0 top-6 bg-white space-y-2.5 border border-brand-gray-30 rounded-2xl lg:rounded-3xl shadow-contact-dropdown p-4 lg:p-6"
       ref={dropdownRef}
     >
       <div>

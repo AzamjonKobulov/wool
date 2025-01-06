@@ -170,12 +170,10 @@ export default function Navbar() {
                 id="search"
                 onFocus={() => {
                   setIsTyping(true); // Show the modal
-                  document.body.classList.add("overflow-hidden"); // Add class to body
                 }}
                 onBlur={(e) => {
                   if (!e.target.value) {
                     setIsTyping(false); // Hide the modal if input is empty
-                    document.body.classList.remove("overflow-hidden"); // Remove class from body
                   }
                 }}
                 onChange={handleSearchChange}

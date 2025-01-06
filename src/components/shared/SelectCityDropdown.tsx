@@ -45,7 +45,7 @@ export default function SelectCityDropdown({
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
-      className="absolute w-80 lg:w-[552px] z-10 left-0 top-6 space-y-5 bg-white border border-brand-gray-30 rounded-2xl lg:rounded-3xl shadow-contact-dropdown p-4 lg:p-6"
+      className="absolute w-80 lg:w-[552px] z-40 left-0 top-6 space-y-5 bg-white border border-brand-gray-30 rounded-2xl lg:rounded-3xl shadow-contact-dropdown p-4 lg:p-6"
       ref={dropdownRef}
     >
       {/* Header */}
