@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function TopProducts() {
   return (
     <section id="top-products">
-      <div className="max-w-base mx-auto scroll-none overflow-auto mt-8 px-2.5">
+      <div className="max-w-5xl mx-auto scroll-none overflow-auto mt-8 px-2.5">
         <div className="min-w-max flex items-center gap-3">
           {/* Product 1 */}
           <Link
