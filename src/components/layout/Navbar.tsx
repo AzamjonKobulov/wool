@@ -7,12 +7,13 @@ import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import SelectCityDropdown from "../shared/SelectCityDropdown";
 import SearchModal from "../shared/SearchModal";
-import { document } from "postcss";
+import MobileMenu from "../shared/MobileMenu";
 
 export default function Navbar() {
   const [contactsOpen, setContactsOpen] = useState(false);
   const [citiesOpen, setCitiesOpen] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleContacts() {
     setContactsOpen((open) => !open);
@@ -26,6 +27,11 @@ export default function Navbar() {
     const value = e.target.value;
     setIsTyping(value.length > 0);
     // document.body.classList.add("overflow-hidden");
+  }
+
+  function toggleMenu() {
+    setMenuOpen((open) => !open);
+    document.body.classList.toggle("overflow-hidden");
   }
 
   return (
@@ -90,7 +96,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between">
               {/* Menu btn & Logo */}
               <div className="flex items-center gap-2.5">
-                <button>
+                <button onClick={toggleMenu}>
                   <Image
                     src="/assets/svgs/icon-mob-menu.svg"
                     alt="Mob Menu Icon"
@@ -180,10 +186,15 @@ export default function Navbar() {
               />
 
               <AnimatePresence>{isTyping && <SearchModal />}</AnimatePresence>
+
+              {/* Mobile Menu */}
             </div>
           </div>
         </div>
       </nav>
+      <AnimatePresence>
+        {menuOpen && <MobileMenu toggleMenu={toggleMenu} />}
+      </AnimatePresence>
     </header>
   );
 }
