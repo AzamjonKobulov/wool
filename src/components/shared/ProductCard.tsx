@@ -61,7 +61,7 @@ export default function ProductCard({ carpet }: ProductCardProps) {
           <div>
             <p className="flex items-center gap-0.5 ">
               {/* Old Cost */}
-              <span className="text-[#343A40]">4 890 ₽ </span>
+              <span className="text-brand-gray-80">4 890 ₽ </span>
               {/* Discount */}
               <span className="bg-brand-yellow font-semibold text-brand-dark">
                 -35%

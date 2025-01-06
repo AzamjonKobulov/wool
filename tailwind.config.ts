@@ -52,12 +52,16 @@ export default {
             50: "#9393A3",
             60: "#67677A",
             70: "#3E3E52",
+            80: "#343A40",
           },
         },
       },
       borderRadius: {
         10: "10px",
         20: "20px",
+      },
+      boxShadow: {
+        "contact-dropdown": "0px 64px 134px 0px #0000001A;",
       },
     },
   },
