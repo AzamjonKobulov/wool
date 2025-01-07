@@ -59,7 +59,7 @@ const categories = [
 export default function Categories() {
   return (
     <section id="#categories">
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-6 px-2.5">
         {/* Title */}
         <div className="flex items-center justify-between">
           <h2 className="hidden font-semibold text-brand-dark text-[19px] leading-[26px]">

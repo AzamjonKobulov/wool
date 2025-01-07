@@ -1,7 +1,7 @@
 import Banner from "@/components/pages/home/Banner";
 import Blog from "@/components/pages/home/Blog";
 import Categories from "@/components/pages/home/Categories";
-import Discounts from "@/components/pages/home/Discounts";
+import ProductsBlock from "@/components/pages/home/ProductsBlock";
 import OnlineHyperMarket from "@/components/pages/home/OnlineHyperMarket";
 import PopularBrands from "@/components/pages/home/PopularBrands";
 import Sales from "@/components/pages/home/Sales";
@@ -15,14 +15,14 @@ export default function Home() {
       <Banner />
       <Sales />
       <Categories />
-      <Discounts />
-      <Discounts />
-      <Discounts />
+      <ProductsBlock title={"Подборка товаров со скидками"} />
+      <ProductsBlock title={"Вам это понравится"} />
+      <ProductsBlock title={"Аксессуары"} />
       <OnlineHyperMarket />
-      <Discounts />
+      <ProductsBlock title={"Подборка товаров со скидками"} />
       <SiteRibat />
       <TopProducts />
-      <Discounts />
+      <ProductsBlock title={"Хит продаж"} />
       <SiteRibat />
       <Blog />
       <PopularBrands />

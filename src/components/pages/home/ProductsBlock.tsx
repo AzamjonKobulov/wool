@@ -44,17 +44,21 @@ const carpets = [
   },
 ];
 
-export default function Discounts() {
+interface ProductsBlockProps {
+  title: string;
+}
+
+export default function ProductsBlock({ title }: ProductsBlockProps) {
   return (
     <section id="Sales">
       <div className="max-w-5xl mx-auto pt-8 space-y-6 px-2.5">
         {/* Title */}
         <div className="flex items-center justify-between">
           <h2 className="font-semibold text-brand-dark text-[19px] leading-[26px]">
-            Подборка товаров <br /> со скидками
+            {title}
           </h2>
 
-          <button className="flex items-center gap-2.5 bg-brand-gray-20 text-brand-purple-10 text-xs font-semibold leading-5 rounded-lg py-1.5 px-3">
+          <button className="flex items-center gap-2.5 bg-brand-gray-20 text-brand-purple-10 text-xs font-semibold leading-5 whitespace-nowrap rounded-lg py-1.5 px-3">
             Смотреть все
             <svg
               width="12"
@@ -97,7 +101,7 @@ export default function Discounts() {
               spaceBetween: 20,
             },
           }}
-          className="discounts_swiper"
+          className="products_swiper"
         >
           {carpets.map((carpet, idx) => (
             <SwiperSlide key={idx}>
