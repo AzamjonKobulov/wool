@@ -4,7 +4,7 @@ import Categories from "../pages/home/Categories";
 export default function SearchModal() {
   return (
     <motion.div
-      className="max-w-[360px] absolute top-0 h-screen z-20 bg-white pt-32 pb-24 px-2.5"
+      className="absolute top-0 h-screen z-20 bg-white pt-32 pb-24 px-2.5"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 50 }}
